@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/book.css">
+    <title>Book arrival</title>
+</head>
+<body>
+    <header>
+       <nav>
+           <a href="../index.html">HOME</a>
+           <img src="../src/star_40px.png" alt="">
+           <a href="rooms.html">ROOMS</a>
+           <img src="../src/star_40px.png" alt="">
+           <a href="gallery.html">GALLERY</a>
+           <img src="../src/star_40px.png" alt="">
+           <a href="location.html">LOCATION</a>
+           <img src="../src/star_40px.png" alt="">
+           <a href="dining.html">DINING</a>
+           <img src="../src/star_40px.png" alt="">
+           <a href="meetings.html">MEETINGS</a>
+       </nav>
+   </header>
+
+   <main>
+        <section id="weather">
+            <p>Weather in Belgrade</p>
+            <div class="icon"></div>
+            <div id="description"></div>
+            <div>
+                <span id="temperature">temp</span>
+                <span>&deg;C</span>
+            </div>
+        </section>
+
+        <section id="booking">
+            <h1>Book Your Stay</h1>
+            <form action="#">
+                    <p>
+                        <label for="check-in">Check-in</label>
+                        <input type="date" name="check" id="check-in" required>
+                    </p>
+
+                    <p>
+                        <label for="nights">Enter number of nights</label>
+                        <input type="number" name="nights" id="nights" required min="1">
+                    </p>
+
+                    <p>
+                        <label for="num-people">Select number of people</label>
+                        <select name="num-people" id="num-people" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </p>
+
+                    <input type="submit" value="BOOK">
+                </form>
+
+                <div id="countdown" class="hide">
+                    <div class="cn">
+                        <h3>Time until your arrival</h3>
+                        <p>Days <span class="day"></span></p>
+                        <p>Hours <span class="hours"></span></p>
+                        <p>Minutes <span class="minutes"></span></p>
+                        <p>Seconds <span class="sec"></span></p>
+                    </div>
+                    <div class="poruka"></div>
+                    <h4>Have fun while you wait</h4>
+                    <button>
+                        <a href="../loto-game/loto.html" target="_blank">PLAY</a>
+                    </button>
+                </div>
+        </section>
+   </main>
+
+   <script src="https://kit.fontawesome.com/32359a2293.js" crossorigin="anonymous"></script>
+   <script src="../js/forecast.js"></script>
+   <script src="../js/book.js"></script>
+</body>
+</html>
